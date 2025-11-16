@@ -3,9 +3,9 @@ pipeline {
 
     stages {
         stage('Test') {
-
+            steps {
             sh 'echo "test stage"'
-
+            }
         }
         stage('Build') {
             agent {
