@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
             sh 'echo "test stage"'
-            ls -la ./build/index.html
+            sh 'ls -la ./build/index.html'
             }
         }
         stage('Build') {
