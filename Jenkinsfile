@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            sh 'echo "test stage"'
-            sh 'ls -la ./build/index.html'
+            sh '''
+              echo "test stage"
+              ls -la ./build/index.html
+              npm test
+              '''
             }
         }
         stage('Build') {
